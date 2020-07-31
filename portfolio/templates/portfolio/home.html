@@ -1,0 +1,35 @@
+{% extends 'portfolio/base.html' %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+{% block content %}
+   <div class="container text-center">
+   <b><h1 id="hometext" class="font-weight-bold">JASIM'S PORTFOLIO</h1></b>
+{% load static %}
+<div class="container text-center">
+<img src="{% static 'portfolio/Screenshot (43).png'%}"width="600" height="600">
+<br><br>
+<b><i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut est augue. Nunc sed sollicitudin leo. Nullam a enim a orci pulvinar scelerisque vel eu ante. Pellentesque mollis nunc erat. Pellentesque feugiat turpis vitae lacinia ultrices. Nunc finibus aliquet dolor vel gravida. Praesent rhoncus risus id maximus congue. Ut auctor commodo nunc sed vulputate. Etiam at mattis purus. Etiam in felis magna. Suspendisse ac risus eget sapien ultrices dictum sodales eget nulla. Sed interdum justo arcu, ac viverra quam tincidunt ut. Ut malesuada nulla tortor, sit amet interdum lacus varius non. Nam euismod, lacus eget posuere pretium, eros eros tristique velit, in pretium augue turpis id felis.
+
+Ut pulvinar mattis congue. Fusce semper odio ut leo euismod, non porta turpis malesuada. Phasellus eu sem luctus, tristique sem id, accumsan augue. Proin aliquet ullamcorper urna a luctus. Nulla a eleifend augue. Aenean iaculis nisi quis tempus cursus. Donec luctus eros ut felis volutpat mollis.</p></i></b>
+<br>
+<h2 class="mt-5"><b>Projects</b></h2>
+<hr>
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
+
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
