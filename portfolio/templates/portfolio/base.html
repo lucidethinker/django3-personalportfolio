@@ -6,42 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-
 
 </style>
 
@@ -56,18 +20,18 @@
     <title>Hi there !</title>
   </head>
   {% load static %}
-  <link rel="icon" href="{% static 'portfolio/download.png.png'%}" type="image/x-icon" />
+  <link rel="icon" href="{% static 'portfolio/download.png'%}" type="image/x-icon" />
   <link rel="shortcut icon" href="{% static 'portfolio/download.png'%}" type="image/x-icon" />
   <body>
 
-  	<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-   
-      {% load static %}
-    <a href="{% url 'son' %}">
-   <img src="{% static 'portfolio/download.png'%}" width="70" height="70" class="d-inline-block align-top" alt="" loading="lazy">
-   </a> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {% load static %}
+
+   <img  class="img-fluid" alt="Responsive image" src="{% static 'portfolio/download.png'%}" width="70" height="70"  loading="lazy">
+
+
+  <div class="navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
@@ -80,12 +44,16 @@
       </li>
     </ul>
   </div>
-  <a href="https://www.facebook.com/jasim.ihsan.39" class="fa fa-facebook"></a>
+<!--   <a href="https://www.facebook.com/jasim.ihsan.39" class="fa fa-facebook"></a>
 <a href="https://www.instagram.com/ihsan.jsm/?fbclid=IwAR0YYa90ElezPOBP1xXpWrJxjCejoSEpzy2VMmPvFH8tP032gGD0KCbnSYc" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-instagram"></a> -->
 
-
+<a href="https://www.facebook.com/jasim.ihsan.39">
+<i class="fa fa-facebook" aria-hidden="true"></i></a>
+<a href="https://www.instagram.com/ihsan.jsm/?fbclid=IwAR0YYa90ElezPOBP1xXpWrJxjCejoSEpzy2VMmPvFH8tP032gGD0KCbnSYc">
+<i class="fa fa-instagram" aria-hidden="true"></i></a>
+<a href="https://www.facebook.com/jasim.ihsan.39">
+<i class="fa fa-twitter" aria-hidden="true"></i></a>
 
 
 </nav>
